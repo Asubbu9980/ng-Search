@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, OperatorFunction, debounceTime, distinctUntilChanged, map } from 'rxjs';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'app-root',
@@ -11,57 +12,46 @@ export class AppComponent implements OnInit {
 
   public model: any
 
-  jobTitles: string[] = [
-    "Angular JS",
-    "Angular Developer",
-    "UX/UI developer",
-    "Cloud Architect",
-    "Cloud Computing Analyst",
-    "Cloud Computing Architect",
-    "Cloud Engineer",
-    "Cloud Computing Manager",
-    "Cloud Engineer - Public Trust",
-    "Cloud Engineer - CI Polygraph",
-    "Engineering Cloud Architect",
-    "Architect Engineer Cloud",
-    "Cloud Engineer - Full Scope Polygraph",
-    "Cloud Testing",
-    "Cloud Engineer Analyst",
-    "Network Cloud Administrator",
-    "Senior Cloud Engineer",
-    "Closer",
-    "Cloud",
-    "Vice President Of Organization",
-    "Vice President",
-    "Human Resources",
-    "Human Resource Manager",
-    "Talent Acquisition",
-    "Information Technology",
-    "Technology VP",
-    "Cheif Executive Officer",
-    "Cheif Technology Officer",
-    "Managing Director",
-    "Delivery Manager",
-    "Technical Delivery Manager",
-    "Enterprise Architect",
-    "Technical Architect"
-  ]
+  jobTitles: string[] = [];
+  usCities: string[] = [];
 
-  filteredTitles: string[] = []
   ordered_inclusive_results: any = []
   abbrevation_search_results: any = [];
-  search_word_match_results: any
+  search_word_match_results: any = [];
+  exact_word_match_results: any = [];
+  
+  
+  ordered_inclusive_cities_results: any = []
+  abbrevation_search_cities_results: any = [];
+  search_word_match_cities_results: any = []
+  exact_word_match_cities_results: any = [];
 
-  constructor() {
+
+
+  constructor(
+    private ds: DataService,
+  ) {
 
   }
 
   ngOnInit(): void {
+    this.getRolesData();
+    this.getCities();
+  }
 
+  getRolesData() {
+    this.ds.getRoles().subscribe((res: any) => {
+      this.jobTitles = res.data || []
+    })
+  }
+
+  getCities() {
+    this.ds.getCities().subscribe((res: any) => {
+      this.usCities = res.data || []
+    })
   }
 
   formatter = (result: string) => {
-    // console.log(result)
     return result;
   }
 
@@ -71,10 +61,11 @@ export class AppComponent implements OnInit {
       distinctUntilChanged(),
       map((term) => {
         let termsArray = term.split(' ');
+        let searchTerm = term.trim();
+        // Find exact word results 
+        this.exact_word_match_results = this.jobTitles.filter((v) => v.toLowerCase() === searchTerm.trim().toLowerCase())
         // Remove empty spaces
         let temrmWordsArray = termsArray.filter((word: string) => word.trim() !== '')
-        // console.log(temrmWordsArray)
-        // console.log(`term -> ${term}`)
         if (term === '' && temrmWordsArray.length == 0) {
           // If user removes the search word
           return []
@@ -89,23 +80,18 @@ export class AppComponent implements OnInit {
               // Abbrevation Search code.....
               let abbrevation = this.getAbbrevationOfRole(role);
               if (abbrevation.indexOf(searchWord.toLowerCase()) > - 1) {
-                // console.log(`role: ${role} ::: ${abbrevation}`)
                 this.abbrevation_search_results.push(role)
               }
             })
 
             // Boolean Inclusive Search code.....
             let filteredTitles = this.jobTitles.filter((v) => v.toLowerCase().indexOf(searchWord.trim().toLowerCase()) > -1)
-            // console.log(`filteredTitles word: ${searchWord}`, filteredTitles)
             this.search_word_match_results.push(...filteredTitles)
             filteredTitles.forEach((role: string) => {
               let roleWordArray = role.split(' ').map(eachWord => eachWord.toLowerCase());
               let index = roleWordArray.indexOf(searchWord.toLowerCase())
-              // let booleanIndex = role.toLowerCase().indexOf(searchWord.toLowerCase());
-              // console.log(`role : ${role} :: index: ${index}`)
-              // console.log(`role : ${role} :: booleanIndex: ${booleanIndex}`)
               if (index > -1) {
-                if(!this.ordered_inclusive_results[index]) {
+                if (!this.ordered_inclusive_results[index]) {
                   this.ordered_inclusive_results[index] = [];
                 }
                 this.ordered_inclusive_results[index].push(role);
@@ -113,34 +99,109 @@ export class AppComponent implements OnInit {
               }
             })
           })
-      
+
         }
-        
-        
-        // console.log('ordered_inclusive_results', this.ordered_inclusive_results)
-        // console.log('abbrevation_search_results', this.abbrevation_search_results)
-        // console.log('search_word_match_results', this.search_word_match_results)
+
+
         let finalArray: any = [];
+
+        if(this.exact_word_match_results && this.exact_word_match_results.length > 0) {
+          finalArray.push(...this.exact_word_match_results)
+        }
+
         this.ordered_inclusive_results?.forEach((arr: any) => {
           finalArray.push(...arr)
         });
 
+        
+        if (this.search_word_match_results && this.search_word_match_results.length > 0) {
+          finalArray = finalArray.concat(this.search_word_match_results)
+        }
+        
         if (this.abbrevation_search_results && this.abbrevation_search_results.length > 0) {
           finalArray = finalArray.concat(this.abbrevation_search_results?.sort())
         }
 
-        if(this.search_word_match_results && this.search_word_match_results.length > 0) {
-          finalArray = finalArray.concat(this.search_word_match_results)
-        }
-        
-        // console.log('---------------------------------')
-        // console.log('finalArray -> ', finalArray)
         if (finalArray.length) {
           return [...new Set(finalArray)];
         } else {
           return [];
         }
-        // return this.ordered_inclusive_results;
+      },
+      ),
+    );
+
+  citiesSearch = (text$: Observable<string>) =>
+    text$.pipe(
+      debounceTime(500),
+      distinctUntilChanged(),
+      map((term) => {
+        let termsArray = term.split(' ');
+        let searchTerm = term.trim();
+        // Find exact word results 
+        this.exact_word_match_cities_results = this.usCities.filter((v) => v.toLowerCase() === searchTerm.trim().toLowerCase())
+        // Remove empty spaces
+        let temrmWordsArray = termsArray.filter((word: string) => word.trim() !== '')
+        if (term === '' && temrmWordsArray.length == 0) {
+          // If user removes the search word
+          return []
+        } else {
+          // If user enters multiple words
+          this.abbrevation_search_cities_results = [];
+          this.ordered_inclusive_cities_results = [];
+          this.search_word_match_cities_results = [];
+
+          temrmWordsArray?.forEach((searchWord: string) => {
+            this.usCities.forEach((city: string) => {
+              // Abbrevation Search code.....
+              let abbrevation = this.getAbbrevationOfRole(city);
+              if (abbrevation.indexOf(searchWord.toLowerCase()) > - 1) {
+                this.abbrevation_search_cities_results.push(city)
+              }
+            })
+
+            // Boolean Inclusive Search code.....
+            let filteredTitles = this.usCities.filter((v) => v.toLowerCase().indexOf(searchWord.trim().toLowerCase()) > -1)
+            this.search_word_match_cities_results.push(...filteredTitles)
+            filteredTitles.forEach((role: string) => {
+              let roleWordArray = role.split(' ').map(eachWord => eachWord.toLowerCase());
+              let index = roleWordArray.indexOf(searchWord.toLowerCase())
+              if (index > -1) {
+                if (!this.ordered_inclusive_cities_results[index]) {
+                  this.ordered_inclusive_cities_results[index] = [];
+                }
+                this.ordered_inclusive_cities_results[index].push(role);
+                this.ordered_inclusive_cities_results[index].sort()
+              }
+            })
+          })
+
+        }
+
+
+        let finalArray: any = [];
+        if(this.exact_word_match_cities_results && this.exact_word_match_cities_results.length > 0) {
+          finalArray.push(...this.exact_word_match_cities_results)
+        }
+
+        this.ordered_inclusive_cities_results?.forEach((arr: any) => {
+          finalArray.push(...arr)
+        });
+
+        
+        if (this.search_word_match_cities_results && this.search_word_match_cities_results.length > 0) {
+          finalArray = finalArray.concat(this.search_word_match_cities_results)
+        }
+       
+        if (this.abbrevation_search_cities_results && this.abbrevation_search_cities_results.length > 0) {
+          finalArray = finalArray.concat(this.abbrevation_search_cities_results?.sort())
+        }
+
+        if (finalArray.length) {
+          return [...new Set(finalArray)];
+        } else {
+          return [];
+        }
       },
       ),
     );

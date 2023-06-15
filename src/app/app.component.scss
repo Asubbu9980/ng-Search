@@ -6,3 +6,13 @@
         font-size: 1.5rem;
     }
 }
+
+.search-box {
+    display: flex;
+    align-items: center;
+    margin: 7px 0px;
+    .search-text {
+        white-space: nowrap;
+        font-size: 1.5rem
+    }
+}

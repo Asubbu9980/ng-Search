@@ -305,19 +305,29 @@
 
 <!-- Toolbar -->
 <div class="toolbar px-3" role="banner">
-  <span>Imroved Search</span>
+  <span>Improved Search</span>
   <div class="spacer"></div>
 </div>
 
 <div class="content" role="main">
   <div class="autocomplete-container">
     <div class="inner-container">
-      <label for="typeahead-basic" class="mb-1 fw-bold">Search for a role:</label>
-      <input id="typeahead-basic" type="text" class="form-control"  placeholder="Search a role"
-          [(ngModel)]="model"
-          [ngbTypeahead]="search"
-          [resultTemplate]="rt"
-          [resultFormatter]="formatter" />
+      <div class="search-box">
+        <!-- <label for="typeahead-basic" class="mb-1 fw-bold">Search for a role:</label> -->
+        <span class="search-text me-3">I want answers for a</span>
+        <input id="typeahead-basic" type="text" class="form-control auto-complete-search"  placeholder="Search a role"
+            [(ngModel)]="model"
+            [ngbTypeahead]="search"
+            [resultTemplate]="rt"
+            [resultFormatter]="formatter" />
+      </div>
+      <div class="search-box">
+        <span class="search-text me-3">in</span>
+        <input id="typeahead-basic" type="text" class="form-control"  placeholder="Search location"
+            [ngbTypeahead]="citiesSearch"
+            [resultTemplate]="rt"
+            [resultFormatter]="formatter"/>
+      </div>
     </div>
   </div>
 </div>

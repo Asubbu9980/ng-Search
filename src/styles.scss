@@ -11,8 +11,19 @@
 }
 
 .ngb-highlight {
-    font-weight: normal !important;
-    background: #b6b9c5;
-    color: #000000;
-    padding: 0px 2px;
+    // font-weight: normal !important;
+    // background: #b6b9c5;
+    // color: #000000;
+    // padding: 0px 2px;
+    text-decoration: underline;
+}
+
+.input-search-container {
+    width: 100%;
+    position: relative;
+    .dropdown-menu {
+        width: 100%;
+        max-height: 500px;
+        overflow: auto;
+    }
 }

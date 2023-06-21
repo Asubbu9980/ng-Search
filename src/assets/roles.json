@@ -1,46 +1,575 @@
 {
-    "data": [
-        "Angular JS",
-        "Angular Developer",
-        "UX/UI developer",
-        "Cloud Architect",
-        "Cloud Computing Analyst",
-        "Cloud Computing Architect",
-        "Cloud Engineer",
-        "Cloud Computing Manager",
-        "Cloud Engineer - Public Trust",
-        "Cloud Engineer - CI Polygraph",
-        "Engineering Cloud Architect",
-        "Architect Engineer Cloud",
-        "Cloud Engineer - Full Scope Polygraph",
-        "Cloud Testing",
-        "Cloud Engineer Analyst",
-        "Network Cloud Administrator",
-        "Senior Cloud Engineer",
-        "Closer",
-        "Cloud",
-        "Vice President Of Organization",
-        "Vice President (VP) Of Engineering",
-        "Vice President",
-        "Human Resource Director",
-        "Human Resource Manager",
-        "Human Resource (HR) Manager",
-        "Vice president (VP) Development",
-        "Talent Acquisition",
-        "Information Technology",
-        "Technology VP",
-        "Cheif Executive Officer",
-        "Cheif Technology Officer",
-        "Managing Director",
-        "Delivery Manager",
-        "Technical Delivery Manager",
-        "Enterprise Architect",
-        "Technical Architect",
-        "Architect",
-        "Architect Intern",
-        "Architect Manager",
-        "Junior Web Developer",
-        "Junior Designer",
-        "Senior Cyber Security Cloud Engineer"
+    "status": {
+        "code": 200,
+        "message": ""
+    },
+    "body": [
+        {
+            "job_title_id": 50790,
+            "job_title": "Associate Cloud Engineer",
+            "min_exp": "4",
+            "max_exp": 11,
+            "default_exp": "8",
+            "min_edu": "4",
+            "max_edu": 11,
+            "default_edu": "6",
+            "relevance": 2,
+            "occupation_map": [
+                {
+                    "onet_occupation_code": "15-1133.00",
+                    "oes_occupation_code": "15-1133",
+                    "occupation_title": "Software Developers, Systems Software",
+                    "match_weight": 72,
+                    "final_sal_perc": "0.720000"
+                },
+                {
+                    "onet_occupation_code": "15-1199.02",
+                    "oes_occupation_code": "15-1199",
+                    "occupation_title": "Computer Systems Engineers/Architects",
+                    "match_weight": 18,
+                    "final_sal_perc": "0.180000"
+                }
+            ]
+        },
+        {
+            "job_title_id": 52016,
+            "job_title": "Azure Cloud Administrator",
+            "min_exp": "4",
+            "max_exp": 11,
+            "default_exp": "8",
+            "min_edu": "4",
+            "max_edu": 11,
+            "default_edu": "6",
+            "relevance": 2,
+            "occupation_map": [
+                {
+                    "onet_occupation_code": "15-1141.00",
+                    "oes_occupation_code": "15-1141",
+                    "occupation_title": "Database Administrators",
+                    "match_weight": 80,
+                    "final_sal_perc": "0.800000"
+                },
+                {
+                    "onet_occupation_code": "15-1142.00",
+                    "oes_occupation_code": "15-1142",
+                    "occupation_title": "Network and Computer Systems Administrators",
+                    "match_weight": 20,
+                    "final_sal_perc": "0.200000"
+                }
+            ]
+        },
+        {
+            "job_title_id": 8408,
+            "job_title": "Closer",
+            "min_exp": "4",
+            "max_exp": 11,
+            "default_exp": "6",
+            "min_edu": "2",
+            "max_edu": 11,
+            "default_edu": "4",
+            "relevance": 3,
+            "occupation_map": [
+                {
+                    "onet_occupation_code": "43-4131.00",
+                    "oes_occupation_code": "43-4131",
+                    "occupation_title": "Loan Interviewers and Clerks",
+                    "match_weight": 100,
+                    "final_sal_perc": "1.000000"
+                }
+            ]
+        },
+        {
+            "job_title_id": 52025,
+            "job_title": "Cloud Architect",
+            "min_exp": "4",
+            "max_exp": 11,
+            "default_exp": "8",
+            "min_edu": "5",
+            "max_edu": 11,
+            "default_edu": "7",
+            "relevance": 2,
+            "occupation_map": [
+                {
+                    "onet_occupation_code": "15-1143.00",
+                    "oes_occupation_code": "15-1143",
+                    "occupation_title": "Computer Network Architects",
+                    "match_weight": 96,
+                    "final_sal_perc": "0.960000"
+                },
+                {
+                    "onet_occupation_code": "15-1199.06",
+                    "oes_occupation_code": "15-1199",
+                    "occupation_title": "Database Architects",
+                    "match_weight": 24,
+                    "final_sal_perc": "0.240000"
+                }
+            ]
+        },
+        {
+            "job_title_id": 46448,
+            "job_title": "Cloud Computing Analyst",
+            "min_exp": "4",
+            "max_exp": 11,
+            "default_exp": "9",
+            "min_edu": "4",
+            "max_edu": 11,
+            "default_edu": "6",
+            "relevance": 2,
+            "occupation_map": [
+                {
+                    "onet_occupation_code": "15-1199.02",
+                    "oes_occupation_code": "15-1199",
+                    "occupation_title": "Computer Systems Engineers/Architects",
+                    "match_weight": 100,
+                    "final_sal_perc": "1.000000"
+                }
+            ]
+        },
+        {
+            "job_title_id": 46449,
+            "job_title": "Cloud Computing Architect",
+            "min_exp": "4",
+            "max_exp": 11,
+            "default_exp": "9",
+            "min_edu": "4",
+            "max_edu": 11,
+            "default_edu": "6",
+            "relevance": 2,
+            "occupation_map": [
+                {
+                    "onet_occupation_code": "15-1199.02",
+                    "oes_occupation_code": "15-1199",
+                    "occupation_title": "Computer Systems Engineers/Architects",
+                    "match_weight": 100,
+                    "final_sal_perc": "1.000000"
+                }
+            ]
+        },
+        {
+            "job_title_id": 46450,
+            "job_title": "Cloud Computing Manager",
+            "min_exp": "4",
+            "max_exp": 11,
+            "default_exp": "9",
+            "min_edu": "4",
+            "max_edu": 11,
+            "default_edu": "6",
+            "relevance": 2,
+            "occupation_map": [
+                {
+                    "onet_occupation_code": "11-3021.00",
+                    "oes_occupation_code": "11-3021",
+                    "occupation_title": "Computer and Information Systems Managers",
+                    "match_weight": 80,
+                    "final_sal_perc": "0.500000"
+                },
+                {
+                    "onet_occupation_code": "15-1199.02",
+                    "oes_occupation_code": "15-1199",
+                    "occupation_title": "Computer Systems Engineers/Architects",
+                    "match_weight": 100,
+                    "final_sal_perc": "0.500000"
+                }
+            ]
+        },
+        {
+            "job_title_id": 51571,
+            "job_title": "Cloud Engineer",
+            "min_exp": "4",
+            "max_exp": 11,
+            "default_exp": "8",
+            "min_edu": "4",
+            "max_edu": 11,
+            "default_edu": "6",
+            "relevance": 2,
+            "occupation_map": [
+                {
+                    "onet_occupation_code": "15-1133.00",
+                    "oes_occupation_code": "15-1133",
+                    "occupation_title": "Software Developers, Systems Software",
+                    "match_weight": 88,
+                    "final_sal_perc": "0.880000"
+                },
+                {
+                    "onet_occupation_code": "15-1141.00",
+                    "oes_occupation_code": "15-1141",
+                    "occupation_title": "Database Administrators",
+                    "match_weight": 22,
+                    "final_sal_perc": "0.220000"
+                }
+            ]
+        },
+        {
+            "job_title_id": 49035,
+            "job_title": "Cloud Engineer - Full Scope Polygraph",
+            "min_exp": "4",
+            "max_exp": 11,
+            "default_exp": "7",
+            "min_edu": "4",
+            "max_edu": 11,
+            "default_edu": "6",
+            "relevance": 2,
+            "occupation_map": [
+                {
+                    "onet_occupation_code": "17-2071.00",
+                    "oes_occupation_code": "17-2071",
+                    "occupation_title": "Electrical Engineers",
+                    "match_weight": 80,
+                    "final_sal_perc": "0.928000"
+                },
+                {
+                    "onet_occupation_code": "17-2199.02",
+                    "oes_occupation_code": "17-2199",
+                    "occupation_title": "Validation Engineers",
+                    "match_weight": 20,
+                    "final_sal_perc": "0.232000"
+                }
+            ]
+        },
+        {
+            "job_title_id": 49031,
+            "job_title": "Cloud Engineer - Secret",
+            "min_exp": "4",
+            "max_exp": 11,
+            "default_exp": "7",
+            "min_edu": "4",
+            "max_edu": 11,
+            "default_edu": "6",
+            "relevance": 2,
+            "occupation_map": [
+                {
+                    "onet_occupation_code": "17-2071.00",
+                    "oes_occupation_code": "17-2071",
+                    "occupation_title": "Electrical Engineers",
+                    "match_weight": 80,
+                    "final_sal_perc": "0.880000"
+                },
+                {
+                    "onet_occupation_code": "17-2199.02",
+                    "oes_occupation_code": "17-2199",
+                    "occupation_title": "Validation Engineers",
+                    "match_weight": 20,
+                    "final_sal_perc": "0.220000"
+                }
+            ]
+        },
+        {
+            "job_title_id": 49032,
+            "job_title": "Cloud Engineer - Top Secret",
+            "min_exp": "4",
+            "max_exp": 11,
+            "default_exp": "7",
+            "min_edu": "4",
+            "max_edu": 11,
+            "default_edu": "6",
+            "relevance": 2,
+            "occupation_map": [
+                {
+                    "onet_occupation_code": "17-2071.00",
+                    "oes_occupation_code": "17-2071",
+                    "occupation_title": "Electrical Engineers",
+                    "match_weight": 80,
+                    "final_sal_perc": "0.976000"
+                },
+                {
+                    "onet_occupation_code": "17-2199.02",
+                    "oes_occupation_code": "17-2199",
+                    "occupation_title": "Validation Engineers",
+                    "match_weight": 20,
+                    "final_sal_perc": "0.244000"
+                }
+            ]
+        },
+        {
+            "job_title_id": 49033,
+            "job_title": "Cloud Engineer - Top Secret/SCI",
+            "min_exp": "4",
+            "max_exp": 11,
+            "default_exp": "7",
+            "min_edu": "4",
+            "max_edu": 11,
+            "default_edu": "6",
+            "relevance": 2,
+            "occupation_map": [
+                {
+                    "onet_occupation_code": "17-2071.00",
+                    "oes_occupation_code": "17-2071",
+                    "occupation_title": "Electrical Engineers",
+                    "match_weight": 80,
+                    "final_sal_perc": "0.992000"
+                },
+                {
+                    "onet_occupation_code": "17-2199.02",
+                    "oes_occupation_code": "17-2199",
+                    "occupation_title": "Validation Engineers",
+                    "match_weight": 20,
+                    "final_sal_perc": "0.248000"
+                }
+            ]
+        },
+        {
+            "job_title_id": 51577,
+            "job_title": "Cloud Operations Manager",
+            "min_exp": "4",
+            "max_exp": 11,
+            "default_exp": "8",
+            "min_edu": "4",
+            "max_edu": 11,
+            "default_edu": "6",
+            "relevance": 2,
+            "occupation_map": [
+                {
+                    "onet_occupation_code": "11-3021.00",
+                    "oes_occupation_code": "11-3021",
+                    "occupation_title": "Computer and Information Systems Managers",
+                    "match_weight": 40,
+                    "final_sal_perc": "0.400000"
+                },
+                {
+                    "onet_occupation_code": "15-1133.00",
+                    "oes_occupation_code": "15-1133",
+                    "occupation_title": "Software Developers, Systems Software",
+                    "match_weight": 40,
+                    "final_sal_perc": "0.400000"
+                },
+                {
+                    "onet_occupation_code": "15-1142.00",
+                    "oes_occupation_code": "15-1142",
+                    "occupation_title": "Network and Computer Systems Administrators",
+                    "match_weight": 20,
+                    "final_sal_perc": "0.200000"
+                }
+            ]
+        },
+        {
+            "job_title_id": 49091,
+            "job_title": "Cloud Solutions Architect",
+            "min_exp": "4",
+            "max_exp": 11,
+            "default_exp": "7",
+            "min_edu": "6",
+            "max_edu": 11,
+            "default_edu": "8",
+            "relevance": 2,
+            "occupation_map": [
+                {
+                    "onet_occupation_code": "15-1111.00",
+                    "oes_occupation_code": "15-1111",
+                    "occupation_title": "Computer and Information Research Scientists",
+                    "match_weight": 60,
+                    "final_sal_perc": "0.600000"
+                },
+                {
+                    "onet_occupation_code": "15-1132.00",
+                    "oes_occupation_code": "15-1132",
+                    "occupation_title": "Software Developers, Applications",
+                    "match_weight": 30,
+                    "final_sal_perc": "0.300000"
+                },
+                {
+                    "onet_occupation_code": "15-1133.00",
+                    "oes_occupation_code": "15-1133",
+                    "occupation_title": "Software Developers, Systems Software",
+                    "match_weight": 10,
+                    "final_sal_perc": "0.100000"
+                }
+            ]
+        },
+        {
+            "job_title_id": 51714,
+            "job_title": "Cloud Systems Administrator",
+            "min_exp": "5",
+            "max_exp": 11,
+            "default_exp": "8",
+            "min_edu": "4",
+            "max_edu": 11,
+            "default_edu": "6",
+            "relevance": 2,
+            "occupation_map": [
+                {
+                    "onet_occupation_code": "15-1121.00",
+                    "oes_occupation_code": "15-1121",
+                    "occupation_title": "Computer Systems Analysts",
+                    "match_weight": 80,
+                    "final_sal_perc": "0.800000"
+                },
+                {
+                    "onet_occupation_code": "15-1142.00",
+                    "oes_occupation_code": "15-1142",
+                    "occupation_title": "Network and Computer Systems Administrators",
+                    "match_weight": 20,
+                    "final_sal_perc": "0.200000"
+                }
+            ]
+        },
+        {
+            "job_title_id": 51128,
+            "job_title": "Network Cloud Administrator",
+            "min_exp": "6",
+            "max_exp": 11,
+            "default_exp": "8",
+            "min_edu": "3",
+            "max_edu": 11,
+            "default_edu": "5",
+            "relevance": 2,
+            "occupation_map": [
+                {
+                    "onet_occupation_code": "15-1142.00",
+                    "oes_occupation_code": "15-1142",
+                    "occupation_title": "Network and Computer Systems Administrators",
+                    "match_weight": 72,
+                    "final_sal_perc": "0.720000"
+                },
+                {
+                    "onet_occupation_code": "15-1152.00",
+                    "oes_occupation_code": "15-1152",
+                    "occupation_title": "Computer Network Support Specialists",
+                    "match_weight": 18,
+                    "final_sal_perc": "0.180000"
+                }
+            ]
+        },
+        {
+            "job_title_id": 51129,
+            "job_title": "Network Cloud Administrator and DevOps Engineer",
+            "min_exp": "4",
+            "max_exp": 11,
+            "default_exp": "8",
+            "min_edu": "4",
+            "max_edu": 11,
+            "default_edu": "6",
+            "relevance": 2,
+            "occupation_map": [
+                {
+                    "onet_occupation_code": "15-1133.00",
+                    "oes_occupation_code": "15-1133",
+                    "occupation_title": "Software Developers, Systems Software",
+                    "match_weight": 60,
+                    "final_sal_perc": "0.600000"
+                },
+                {
+                    "onet_occupation_code": "15-1142.00",
+                    "oes_occupation_code": "15-1142",
+                    "occupation_title": "Network and Computer Systems Administrators",
+                    "match_weight": 30,
+                    "final_sal_perc": "0.300000"
+                },
+                {
+                    "onet_occupation_code": "15-1152.00",
+                    "oes_occupation_code": "15-1152",
+                    "occupation_title": "Computer Network Support Specialists",
+                    "match_weight": 10,
+                    "final_sal_perc": "0.100000"
+                }
+            ]
+        },
+        {
+            "job_title_id": 50009,
+            "job_title": "Salesforce Marketing Cloud Administrator",
+            "min_exp": "5",
+            "max_exp": 11,
+            "default_exp": "8",
+            "min_edu": "4",
+            "max_edu": 11,
+            "default_edu": "6",
+            "relevance": 2,
+            "occupation_map": [
+                {
+                    "onet_occupation_code": "15-1121.00",
+                    "oes_occupation_code": "15-1121",
+                    "occupation_title": "Computer Systems Analysts",
+                    "match_weight": 80,
+                    "final_sal_perc": "0.800000"
+                },
+                {
+                    "onet_occupation_code": "15-1142.00",
+                    "oes_occupation_code": "15-1142",
+                    "occupation_title": "Network and Computer Systems Administrators",
+                    "match_weight": 20,
+                    "final_sal_perc": "0.200000"
+                }
+            ]
+        },
+        {
+            "job_title_id": 52017,
+            "job_title": "Senior Azure Cloud Administrator",
+            "min_exp": "4",
+            "max_exp": 11,
+            "default_exp": "8",
+            "min_edu": "4",
+            "max_edu": 11,
+            "default_edu": "6",
+            "relevance": 2,
+            "occupation_map": [
+                {
+                    "onet_occupation_code": "15-1141.00",
+                    "oes_occupation_code": "15-1141",
+                    "occupation_title": "Database Administrators",
+                    "match_weight": 88,
+                    "final_sal_perc": "0.880000"
+                },
+                {
+                    "onet_occupation_code": "15-1142.00",
+                    "oes_occupation_code": "15-1142",
+                    "occupation_title": "Network and Computer Systems Administrators",
+                    "match_weight": 22,
+                    "final_sal_perc": "0.220000"
+                }
+            ]
+        },
+        {
+            "job_title_id": 51572,
+            "job_title": "Senior Cloud Engineer",
+            "min_exp": "4",
+            "max_exp": 11,
+            "default_exp": "8",
+            "min_edu": "4",
+            "max_edu": 11,
+            "default_edu": "6",
+            "relevance": 2,
+            "occupation_map": [
+                {
+                    "onet_occupation_code": "15-1133.00",
+                    "oes_occupation_code": "15-1133",
+                    "occupation_title": "Software Developers, Systems Software",
+                    "match_weight": 96,
+                    "final_sal_perc": "0.960000"
+                },
+                {
+                    "onet_occupation_code": "15-1141.00",
+                    "oes_occupation_code": "15-1141",
+                    "occupation_title": "Database Administrators",
+                    "match_weight": 24,
+                    "final_sal_perc": "0.240000"
+                }
+            ]
+        },
+        {
+            "job_title_id": 50788,
+            "job_title": "Senior Cyber Security Cloud Engineer",
+            "min_exp": "4",
+            "max_exp": 11,
+            "default_exp": "8",
+            "min_edu": "4",
+            "max_edu": 11,
+            "default_edu": "6",
+            "relevance": 2,
+            "occupation_map": [
+                {
+                    "onet_occupation_code": "15-1122.00",
+                    "oes_occupation_code": "15-1122",
+                    "occupation_title": "Information Security Analysts",
+                    "match_weight": 88,
+                    "final_sal_perc": "0.880000"
+                },
+                {
+                    "onet_occupation_code": "15-1143.00",
+                    "oes_occupation_code": "15-1143",
+                    "occupation_title": "Computer Network Architects",
+                    "match_weight": 22,
+                    "final_sal_perc": "0.220000"
+                }
+            ]
+        }
     ]
 }

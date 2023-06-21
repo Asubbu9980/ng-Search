@@ -9,10 +9,10 @@ export class TokenInetrceptor implements HttpInterceptor {
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         // add auth header with jwt if account is logged in and request is to the api url
-        const Token = environment.token
-        const Authorization = environment.Authorization
-        const XAmzSecurityToken =  environment.XAmzSecurityToken
-        const XAmzDate = environment.XAmzDate
+        // const Token = environment.token
+        // const Authorization = environment.Authorization
+        // const XAmzSecurityToken =  environment.XAmzSecurityToken
+        // const XAmzDate = environment.XAmzDate
 
         // request = request.clone({
         //     headers: request.headers

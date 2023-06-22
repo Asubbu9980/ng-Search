@@ -27,15 +27,15 @@ export class DataService {
 
     let queryParms = '';
     const queryParmsObj = {
-      pattern: term,
-      type: '',
-      ignoreRelevance: true
+      text: term,
+      // type: '',
+      // ignoreRelevance: true
     }
 
     queryParms = this.getQueryParams(queryParmsObj)
-    // let JOB_LIST_URL = `${environment.JOB_LIST_URL}${queryParms}`
+    let JOB_LIST_URL = `${environment.JOB_LIST_API}${queryParms}`
     // let JOB_LIST_URL = `${environment.JOB_LIST_URL_LOCAL}` //Local node js server
-    let JOB_LIST_URL = `${environment.JOB_LIST_URL_LOCAL_JSON}` // Local JSON file
+    // let JOB_LIST_URL = `${environment.JOB_LIST_URL_LOCAL_JSON}` // Local JSON file
     return this.http.get(JOB_LIST_URL).pipe(
       map((repsonse: any) => {
         // console.log(repsonse.body)

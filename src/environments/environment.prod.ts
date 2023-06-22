@@ -1,5 +1,6 @@
 export const environment = {
   production: true,
+  JOB_LIST_API: 'https://yielding-alkaline-roast.glitch.me/users/api',
   JOB_LIST_URL: 'https://j48phwbvl7.execute-api.us-east-1.amazonaws.com/stg/data/jobtitlelist',
   JOB_LIST_URL_LOCAL: 'http://localhost:3000/api/joblists',
   CITIES_LIST_URL_LOCAL: 'http://localhost:3000/api/cities',
